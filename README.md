@@ -37,6 +37,8 @@
 - 🖥️ Herramientas de desarrollo CMake y GNU Make
 
 ## Configuración
+> *Nota*: Desarrollo en construcción, no finalizado, implementado ni testeado.
+
 
 1. **Clonar el Repositorio**:
     ```sh
@@ -162,8 +164,6 @@
 - Maneja la **comunicación de depuración** por UART.  
   - Envía estructuras con la imagen procesada o con el número de pipas detectadas.  
   - Útil para monitorear datos en una PC o sistema externo.
-
-> *Nota*: Los headers `.h` (como `median_filter.h`, `detection.h`, etc.) simplemente **declaran** las funciones y estructuras que se usan en los `.c`. Revisarlos puede ser útil si necesitas entender la API, pero la **implementación real** está en los `.c`.
 
 ## Códigos Explicados
 
