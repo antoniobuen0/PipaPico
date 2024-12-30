@@ -1,29 +1,53 @@
 # PipaPico
 
-Dispensador de pipas
+## Tabla de Contenidos
+1. [Descripción](#descripción)
+2. [Requisitos](#requisitos)
+3. [Configuración](#configuración)
+4. [Uso](#uso)
+5. [Diseño Detallado](#diseño-detallado)
+6. [Componentes](#componentes)
+7. [Estructura del Código](#estructura-del-código)
+8. [Códigos Explicados](#códigos-explicados)
+9. [Contribuciones](#contribuciones)
+10. [Licencia](#licencia)
 
 ## Descripción
-
-PipaPico es un proyecto basado en la placa RP2040 que implementa un dispensador de pipas. Utiliza procesamiento de imágenes para detectar y contar pipas en tiempo real.
+✨ PipaPico es un proyecto basado en la placa **RP2040-Zero** que implementa un dispensador de pipas de manera automática. Utiliza procesamiento de imágenes para detectar, contar y gestionar pipas en tiempo real. ✨
 
 ## Requisitos
 
-- Placa RP2040
-- Sensor de imagen compatible
-- Conexión UART para depuración
-- Biblioteca Pico SDK
+### Electrónicos
+- 🔧 **Placa RP2040-Zero**
+- 🔧 **Cámara OV7670** (sensor de imagen compatible)
+- 🔧 **Motor Paso a Paso 28BYJ-48** + Driver ULN2003
+- 🔧 **2 Servos SG90** (para trampilla y dispensador)
+- 🔧 **Motor de Vibración 1034**
+- 🔧 **Fuente de Alimentación 5V, 2A**
+
+### Materiales Estructurales
+- 🔧 Guías de cajón
+- 🔧 Varilla roscada (M5 o M8)
+- 🔧 Perfiles de aluminio o madera
+- 🔧 Bandeja de acrílico o metal
+- 🔧 Tornillos y tuercas
+
+### Software
+- 🔧 Pico SDK (Configuración en [Pico SDK](https://github.com/raspberrypi/pico-sdk))
+- 🔧 Herramientas de desarrollo CMake y GNU Make
 
 ## Configuración
 
-1. Clona el repositorio:
+1. **Clonar el Repositorio**:
     ```sh
     git clone https://github.com/antoniobuen0/PipaPico.git
     cd PipaPico
     ```
 
-2. Configura el entorno de desarrollo para RP2040 siguiendo las instrucciones del [Pico SDK](https://github.com/raspberrypi/pico-sdk).
+2. **Configurar el Entorno de Desarrollo**:
+    ✨ Sigue las instrucciones oficiales del [Pico SDK](https://github.com/raspberrypi/pico-sdk) para configurar tu entorno. ✨
 
-3. Compila el proyecto:
+3. **Compilar el Proyecto**:
     ```sh
     mkdir build
     cd build
@@ -31,85 +55,89 @@ PipaPico es un proyecto basado en la placa RP2040 que implementa un dispensador 
     make
     ```
 
-4. Carga el firmware en la placa RP2040.
+4. **Cargar el Firmware en la Placa**:
+    🚀 Conecta la RP2040-Zero mediante USB y copia el archivo `.uf2` generado en la unidad que aparece.
 
 ## Uso
 
-1. Conecta el sensor de imagen a la placa RP2040.
-2. Conecta la placa RP2040 a tu computadora mediante USB.
-3. Abre una terminal serial en `/dev/ttyACM0` (o el puerto correspondiente) a 115200 baudios.
-4. Observa la salida en la terminal para ver el conteo de pipas y el tiempo de procesamiento.
+1. **Conectar los Componentes**:
+    - 🔧 Conecta la cámara OV7670 y los motores siguiendo el esquema del repositorio.
+    - 🔧 Alimenta la placa con la fuente de 5V.
+
+2. **Abrir la Terminal Serial**:
+    - 🔧 Utiliza un programa como `minicom` o `PuTTY` para acceder al puerto serial (por ejemplo, `/dev/ttyACM0`) a **115200 baudios**.
+
+3. **Observar el Resultado**:
+    - 🔧 El sistema mostrará el conteo de pipas, tiempo de procesamiento y estado de los motores.
 
 ## Diseño Detallado
 
 ### 1. Depósito Principal con Salida Reducida
-- **Función:** Almacenar las semillas y limitar el flujo hacia la bandeja compuerta.
-- **Características:**
-  - Salida con abertura reducida para minimizar el riesgo de que la vibración empuje más semillas de las necesarias.
-  - Vibración activa solo cuando se requiere llenar la bandeja.
-  - Forma inclinada para facilitar el flujo hacia la abertura.
+- **Función**: ✨ Almacenar las pipas y limitar el flujo hacia la bandeja. ✨
+- **Detalles**:
+  - Salida ajustada para evitar que salgan más de las necesarias con la vibración.
+  - Forma inclinada para facilitar el flujo.
 
 ### 2. Bandeja Compuerta
-- **Función:** Realiza el chequeo inicial y permite manejar excesos devolviendo semillas al depósito.
-- **Características:**
-  - Detector de cantidad: Un sensor visual o infrarrojo detecta si hay 1 semilla, más de una o ninguna.
-  - Trampilla basculante:
-    - Si hay exceso, la bandeja se inclina para devolver las semillas al depósito.
-    - Al volver a su posición original, la trampilla se une al depósito principal sin dejar espacio para derrames.
-  - Retroalimentación al sistema:
-    - Si no llegó ninguna semilla, activa la vibración nuevamente.
+- **Función**: ✨ Chequear la cantidad de pipas y manejar excesos. ✨
+- **Detalles**:
+  - Sensor para detectar la cantidad de pipas.
+  - Trampilla basculante para devolver el exceso al depósito.
 
 ### 3. Ascensor con Tres Niveles
-- **Niveles:**
-  1. Nivel Depósito:
-    - El ascensor en esta posición permite que las semillas caigan hacia la bandeja compuerta.
-  2. Nivel Compuerta:
-    - Se realiza el chequeo de cantidad y el manejo de excesos.
-  3. Nivel Superior:
-    - Si hay 1 semilla, el ascensor la eleva y la libera al exterior.
-- **Mecanismo de Elevación:**
-  - Motor paso a paso o husillo para precisión en la posición.
-  - Estructura sólida para manejar cargas ligeras como semillas.
-
-### Lógica del Proceso
-1. **Inicialización:**
-  - El sistema comienza en el nivel depósito y activa la vibración para llenar la bandeja compuerta.
-  - La bandeja compuerta chequea el contenido con el detector.
-2. **Chequeo de Cantidad:**
-  - Nada detectado: Se activa nuevamente la vibración.
-  - Exceso detectado: La bandeja se inclina como trampilla, devolviendo el contenido al depósito.
-  - Una semilla detectada: El ascensor se mueve al nivel superior.
-3. **Entrega:**
-  - En el nivel superior, la semilla se libera al exterior.
-  - El ascensor regresa al nivel depósito para repetir el proceso.
+- **Niveles**:
+  - **Nivel Depósito**: Llenado desde el depósito principal.
+  - **Nivel Compuerta**: Chequeo y manejo de exceso.
+  - **Nivel Superior**: Entrega de pipas.
 
 ## Componentes
 
-| Categoría           | Componente                        |
-|---------------------|-----------------------------------|
-| **Controlador**     | RP2040-Zero                      |
-| **Motores y Servos**| Motor Paso a Paso 28BYJ-48 + ULN2003, Servo SG90 |
-| **Actuadores**      | Motor de Vibración 1034           |
-| **Sensores**        | OV7670 (Cámara)                   |
-| **Estructura Física**| Guías de Cajón, Varilla Roscada (M5 o M8), Perfiles de Aluminio o Madera, Bandeja de Acrílico o Metal, Tornillos y Tuercas |
-| **Alimentación**    | Fuente de Alimentación 5V 2A      |
-| **Accesorios**      | Acoplador Flexible, Protoboard o PCB Personalizada, Cables Dupont |
+| **Categoría**          | **Componente**                                       | **Cantidad** |
+|--------------------------|-----------------------------------------------------|--------------|
+| **Controlador**          | RP2040-Zero                                        | 1            |
+| **Motores y Actuadores** | Motor Paso a Paso 28BYJ-48 + ULN2003               | 1            |
+|                          | Servo SG90                                         | 2            |
+|                          | Motor de Vibración 1034                            | 1            |
+| **Sensores**             | Cámara OV7670                                     | 1            |
+| **Estructura Física**    | Guías de Cajón, Varilla Roscada, Perfiles y Bandejas | Variado      |
+| **Alimentación**         | Fuente de Alimentación 5V 2A                       | 1            |
 
 ## Estructura del Código
 
-- `main.c`: Contiene la lógica principal del programa.
-- `config.h`: Configuraciones del proyecto.
-- `types.h`: Definiciones de tipos utilizados en el proyecto.
-- `median_filter.h`: Implementación del filtro de mediana.
-- `detection.h`: Funciones para la detección de pipas.
-- `symmetry.h`: Funciones relacionadas con la simetría (si aplica).
-- `debug_comm.h`: Comunicación para depuración.
+- [`main.c`](https://github.com/antoniobuen0/PipaPico/blob/main/main.c): ✨ Lógica principal del dispensador. ✨
+- [`config.h`](https://github.com/antoniobuen0/PipaPico/blob/main/include/config.h): ✨ Configuraciones globales del proyecto. ✨
+- [`median_filter.h`](https://github.com/antoniobuen0/PipaPico/blob/main/include/median_filter.h): ✨ Implementación del filtro de mediana. ✨
+- [`detection.h`](https://github.com/antoniobuen0/PipaPico/blob/main/include/detection.h): ✨ Detección de pipas. ✨
+- [`symmetry.h`](https://github.com/antoniobuen0/PipaPico/blob/main/include/symmetry.h): ✨ Cálculo de simetría para validar detecciones. ✨
+- [`debug_comm.h`](https://github.com/antoniobuen0/PipaPico/blob/main/include/debug_comm.h): ✨ Comunicación serial para depuración. ✨
+
+## Códigos Explicados
+
+### `main.c`
+Este archivo contiene el flujo principal del programa:
+1. 🔧 Inicializa los periféricos (cámara, motores, UART).
+2. 🔧 Captura una imagen desde la cámara.
+3. 🔧 Procesa la imagen (filtro de mediana y umbralizado).
+4. 🔧 Detecta las pipas y evalúa su cantidad.
+5. 🔧 Controla los motores para gestionar las pipas.
+
+### `median_filter.h`
+🔧 Implementa un filtro de mediana 3x3 para reducir el ruido en las imágenes capturadas. Es clave para mejorar la detección de bordes. 🔧
+
+### `detection.h`
+🔧 Contiene las funciones para detectar pipas en la imagen procesada. Utiliza algoritmos como el etiquetado de componentes conectados (flood fill). 🔧
+
+### `symmetry.h`
+🔧 Evalúa la simetría de las pipas detectadas para descartar falsos positivos o agrupaciones incorrectas. 🔧
+
+### `debug_comm.h`
+🔧 Proporciona herramientas para enviar datos de depuración a través del puerto serial, incluyendo datos de las pipas detectadas y tiempos de procesamiento. 🔧
 
 ## Contribuciones
 
-Las contribuciones son bienvenidas. Por favor, abre un issue o un pull request para discutir cualquier cambio.
+✨ Las contribuciones son bienvenidas. Si deseas mejorar el proyecto o reportar errores, abre un issue o un pull request en el [repositorio](https://github.com/antoniobuen0/PipaPico). ✨
 
 ## Licencia
 
-Este proyecto está licenciado bajo la Licencia GPL-3.0. Consulta el archivo `LICENSE` para más detalles.
+✨ Este proyecto está licenciado bajo la Licencia GPL-3.0. Consulta el archivo [`LICENSE`](https://github.com/antoniobuen0/PipaPico/blob/main/LICENSE) para más detalles. ✨
 
