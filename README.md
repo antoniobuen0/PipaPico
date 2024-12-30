@@ -81,7 +81,7 @@
 ### 2. Bandeja Compuerta
 - **Función**: ⚖️ Chequear la cantidad de pipas y manejar excesos. ✂️
 - **Detalles**:
-  - Sensor para detectar la cantidad de pipas.
+  - Aquí entra en juego la cámara para detectar la cantidad de pipas.
   - Trampilla basculante para devolver el exceso al depósito.
 
 ### 3. Ascensor con Tres Niveles
@@ -108,6 +108,7 @@
    - Motor de vibración
    - Servo de trampilla
 
+
 ### Diagrama de Estados
 ```
 [Captura] → [Procesado] → [Detección] → [Decisión]
@@ -122,53 +123,80 @@
 ## Componentes
 
 | **Categoría**          | **Componente**                                       | **Cantidad** |
-|--------------------------|-----------------------------------------------------|--------------|
-| **Control Principal**    | RP2040-Zero                                        | 1            |
-| **Sensores**            | Cámara OV7670                                      | 1            |
-| **Actuadores**          | Servo SG90 (Dispensador)                           | 1            |
-|                         | Servo SG90 (Trampilla)                             | 1            |
-|                         | Motor de Vibración                                  | 1            |
-| **Estructura**          | Guías y Soportes                                   | Varios       |
+|------------------------|-------------------------------------------------------|--------------|
+| **Control Principal**  | RP2040-Zero                                          | 1            |
+| **Sensores**           | Cámara OV7670                                        | 1            |
+| **Actuadores**         | Servo SG90 (Dispensador)                             | 1            |
+|                        | Servo SG90 (Trampilla)                               | 1            |
+|                        | Motor de Vibración                                   | 1            |
+| **Estructura**         | Guías y Soportes                                     | Varios       |
 
 ## Estructura del Código
 
-### Detección Visual (`main.c`, `detection.c`)
-- 📸 Captura de imagen
-- 🔍 Procesamiento y detección
-- 📊 Conteo de pipas
+- El **núcleo** de la lógica se encuentra en archivos `.c`, mientras que los headers (`.h`) declaran prototipos y estructuras.  
+- A continuación se describen los archivos `.c` principales y su responsabilidad:
 
-### Control de Actuadores (`main.c`)
-```c
-if (numPipas == 1) {
-    // Activar servo dispensador
-} else if (numPipas == 0) {
-    // Activar vibración
-} else {
-    // Abrir trampilla
-}
-```
+### `main.c`
+- **Flujo Principal** del programa:  
+  1. Inicializa periféricos (cámara, UART, etc.).  
+  2. Captura una imagen desde la cámara (y genera XCLK si procede).  
+  3. Aplica filtrados / umbralizados básicos.  
+  4. Llama a la detección de pipas.  
+  5. Activa los actuadores (vibración, servos) según el número de pipas detectadas.
+
+### `median_filter.c`
+- Implementa el **filtro de mediana 3×3**, clave para reducir ruido (“salt-and-pepper noise”) y mejorar la nitidez antes de la detección.  
+- Usa un **histograma deslizante** para actualizar eficientemente la mediana en cada píxel.
+
+### `detection.c`
+- **Detección de pipas**:  
+  - Realiza el etiquetado de componentes conectados (flood fill) para contar cuántos objetos blancos hay en la imagen binaria.  
+  - Calcula área, bounding box, centro de masa, etc.  
+  - Devuelve el conteo `numPipas`.
+
+### `symmetry.c`
+- Complementa la detección calculando **simetría** (por ejemplo, puntaje de cuán “simétrica” es la pipa).  
+- Puede descartar objetos ambiguos o filtrar regiones que no cumplan cierto nivel de simetría.
+
+### `debug_comm.c`
+- Maneja la **comunicación de depuración** por UART.  
+  - Envía estructuras con la imagen procesada o con el número de pipas detectadas.  
+  - Útil para monitorear datos en una PC o sistema externo.
+
+> *Nota*: Los headers `.h` (como `median_filter.h`, `detection.h`, etc.) simplemente **declaran** las funciones y estructuras que se usan en los `.c`. Revisarlos puede ser útil si necesitas entender la API, pero la **implementación real** está en los `.c`.
 
 ## Códigos Explicados
 
+En esta sección destacamos la **lógica** de cada `.c`:
+
 ### `main.c`
-Este archivo contiene el flujo principal del programa:
-1. 🔌 Inicializa los periféricos (cámara, motores, UART).
-2. 📸 Captura una imagen desde la cámara.
-3. 🛠️ Procesa la imagen (filtro de mediana y umbralizado).
-4. 📊 Detecta las pipas y evalúa su cantidad.
-5. ⚙️ Controla los motores para gestionar las pipas.
+1. 🔌 **Inicializa** periféricos (p.ej. `initCamera()`, UART, etc.).
+2. 📸 **Captura** la imagen desde la cámara (función `captureImage()`).
+3. 🛠️ **Procesa** la imagen (opcional: llama a `optimizedMedianFilter()`, hace un umbralizado).
+4. 📊 **Detecta** las pipas (llamando a `detectPipas()`).
+5. ⚙️ **Controla** motores (servo, vibración) en función de `numPipas`.
 
-### `median_filter.h`
-📉 Implementa un filtro de mediana 3x3 para reducir el ruido en las imágenes capturadas. Es clave para mejorar la detección de bordes. 📉
+### `median_filter.c`
+- **Función principal**: `optimizedMedianFilter()`
+  - Calcula la mediana en vecindarios 3×3 usando una estructura de histograma deslizante.
+  - Sobrescribe el `frameBuffer` (o un buffer temporal) con el resultado filtrado.
 
-### `detection.h`
-🔍 Contiene las funciones para detectar pipas en la imagen procesada. Utiliza algoritmos como el etiquetado de componentes conectados (flood fill). 🔬
+### `detection.c`
+- **Función clave**: `detectPipas(int* numPipas)`
+  - Recorre la imagen binaria (0/255).
+  - Usa un flood fill con stack para agrupar píxeles contiguos en blanco.
+  - Extrae área y bounding box de cada objeto.
+  - Incrementa `(*numPipas)` al encontrar regiones válidas.
 
-### `symmetry.h`
-⚖️ Evalúa la simetría de las pipas detectadas para descartar falsos positivos o agrupaciones incorrectas. 📏
+### `symmetry.c`
+- **Función**: `calculateSymmetry(...)`
+  - Opcional, evalúa la mitad izquierda vs. derecha (o arriba vs. abajo) de la región para un “score” de simetría.
+  - Ayuda a descartar formas que no sean pipas reales.
 
-### `debug_comm.h`
-🛰️ Proporciona herramientas para enviar datos de depuración a través del puerto serial, incluyendo datos de las pipas detectadas y tiempos de procesamiento. 🛰️
+### `debug_comm.c`
+- **Envía** un `DebugFrame` o datos de telemetría:
+  - Estructura empaquetada (timestamp, número de pipas, etc.) por UART.
+  - Permite monitorear el comportamiento del sistema en una PC.
 
 ## Contribuciones
 
@@ -177,4 +205,3 @@ Este archivo contiene el flujo principal del programa:
 ## Licencia
 
 📜 Este proyecto está licenciado bajo la Licencia GPL-3.0. Consulta el archivo [`LICENSE`](https://github.com/antoniobuen0/PipaPico/blob/main/LICENSE) para más detalles. 📜
-
