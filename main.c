@@ -5,6 +5,7 @@
 #include <hardware/uart.h>
 #include <hardware/gpio.h>
 #include <hardware/sync.h>
+#include <hardware/i2c.h>
 
 #include "config.h"
 #include "types.h"
@@ -47,6 +48,16 @@ void processPipasImage(void) {
     memcpy(processedBuffer, frameBuffer, FRAME_SIZE);
 }
 
+void initCamera() {
+    // Configura pines GPIO para VSYNC, HSYNC, PCLK, etc.
+    // Configura interfaz I2C con la cámara OV7670 (registros de configuración).
+}
+
+void captureImage() {
+    // Llenar frameBuffer con datos de la cámara usando VSYNC, HSYNC, PCLK.
+    // Ejemplo: leer cada byte de la cámara y escribirlo en frameBuffer.
+}
+
 // ---------------------------------------------------------
 // Función principal
 // ---------------------------------------------------------
@@ -70,11 +81,17 @@ int main() {
     // Calibración inicial (ejemplo)
     calibrateSystem();
 
+    // Inicializar la cámara
+    initCamera();
+
     // Variables para control de envío de frames de debug
     static uint32_t lastDebugTime = 0;
 
     while (true) {
         uint32_t startTime = to_ms_since_boot(get_absolute_time());
+
+        // Capturar la imagen desde la cámara
+        captureImage();
 
         // Procesamiento “básico” de la imagen (umbralizado u otras operaciones)
         processPipasImage();  

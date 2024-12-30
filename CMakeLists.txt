@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.13)
 
+# Poner la ruta absoluta:
 set(PICO_SDK_PATH "/Users/anto/pico/pico-sdk")
+
+# Incluir *antes* de project()
 include(${PICO_SDK_PATH}/pico_sdk_import.cmake)
 
 project(PipaPico C CXX ASM)
