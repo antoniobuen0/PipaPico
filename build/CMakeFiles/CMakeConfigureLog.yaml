@@ -1,0 +1,1391 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineSystem.cmake:204 (message)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      The system is: Darwin - 24.3.0 - arm64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: /opt/homebrew/bin/arm-none-eabi-gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find crt0.o: No such file or directory
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find -lc: No such file or directory
+      collect2: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /opt/homebrew/bin/arm-none-eabi-gcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is GNU, found in:
+        /Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /opt/homebrew/bin/arm-none-eabi-g++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find crt0.o: No such file or directory
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find -lstdc++: No such file or directory
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find -lm: No such file or directory
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find -lc: No such file or directory
+      collect2: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /opt/homebrew/bin/arm-none-eabi-g++ 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+      
+      The CXX compiler identification is GNU, found in:
+        /Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:1102 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineASMCompiler.cmake:127 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+      arm-none-eabi-gcc (GCC) 14.2.0
+      Copyright (C) 2024 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:4 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-JevnUz"
+      binary: "/Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-JevnUz"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: /Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-JevnUz
+        
+        Run Build Command(s):/opt/homebrew/Cellar/cmake/3.26.4/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_9a000/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_9a000.dir/build.make CMakeFiles/cmTC_9a000.dir/build
+        Building C object CMakeFiles/cmTC_9a000.dir/CMakeCCompilerABI.c.o
+        /opt/homebrew/bin/arm-none-eabi-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk   -v -Wl,-v -o CMakeFiles/cmTC_9a000.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/opt/homebrew/bin/arm-none-eabi-gcc
+        arm-none-eabi-gcc: error: unrecognized command-line option '-arch'; did you mean '-march='?
+        Target: arm-none-eabi
+        Configured with: ../configure --target=arm-none-eabi --prefix=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0 --infodir=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/share/info/arm-none-eabi --disable-nls --without-headers --with-as=/opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-as --with-ld=/opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld --enable-languages=c,c++,objc,lto --enable-lto --enable-multilib --with-multilib-list=aprofile,rmprofile --with-system-zlib --with-zstd --disable-debug --disable-dependency-tracking --prefix=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0 --libdir=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib
+        Thread model: single
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 14.2.0 (GCC) 
+        make[1]: *** [CMakeFiles/cmTC_9a000.dir/CMakeCCompilerABI.c.o] Error 1
+        make: *** [cmTC_9a000/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:4 (project)"
+    checks:
+      - "Check for working C compiler: /opt/homebrew/bin/arm-none-eabi-gcc"
+    directories:
+      source: "/Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-MzzDy8"
+      binary: "/Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-MzzDy8"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk"
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: /Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-MzzDy8
+        
+        Run Build Command(s):/opt/homebrew/Cellar/cmake/3.26.4/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_7138d/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_7138d.dir/build.make CMakeFiles/cmTC_7138d.dir/build
+        Building C object CMakeFiles/cmTC_7138d.dir/testCCompiler.c.o
+        /opt/homebrew/bin/arm-none-eabi-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -o CMakeFiles/cmTC_7138d.dir/testCCompiler.c.o -c /Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-MzzDy8/testCCompiler.c
+        arm-none-eabi-gcc: error: unrecognized command-line option '-arch'; did you mean '-march='?
+        make[1]: *** [CMakeFiles/cmTC_7138d.dir/testCCompiler.c.o] Error 1
+        make: *** [cmTC_7138d/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: /opt/homebrew/bin/arm-none-eabi-gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find crt0.o: No such file or directory
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find -lc: No such file or directory
+      collect2: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /opt/homebrew/bin/arm-none-eabi-gcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is GNU, found in:
+        /Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /opt/homebrew/bin/arm-none-eabi-g++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find crt0.o: No such file or directory
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find -lstdc++: No such file or directory
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find -lm: No such file or directory
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find -lc: No such file or directory
+      collect2: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /opt/homebrew/bin/arm-none-eabi-g++ 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+      
+      The CXX compiler identification is GNU, found in:
+        /Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:1102 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineASMCompiler.cmake:127 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+      arm-none-eabi-gcc (GCC) 14.2.0
+      Copyright (C) 2024 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-MUOlyt"
+      binary: "/Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-MUOlyt"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: /Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-MUOlyt
+        
+        Run Build Command(s):/opt/homebrew/Cellar/cmake/3.26.4/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_a050f/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_a050f.dir/build.make CMakeFiles/cmTC_a050f.dir/build
+        Building C object CMakeFiles/cmTC_a050f.dir/CMakeCCompilerABI.c.o
+        /opt/homebrew/bin/arm-none-eabi-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk   -v -Wl,-v -o CMakeFiles/cmTC_a050f.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/opt/homebrew/bin/arm-none-eabi-gcc
+        arm-none-eabi-gcc: error: unrecognized command-line option '-arch'; did you mean '-march='?
+        Target: arm-none-eabi
+        Configured with: ../configure --target=arm-none-eabi --prefix=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0 --infodir=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/share/info/arm-none-eabi --disable-nls --without-headers --with-as=/opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-as --with-ld=/opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld --enable-languages=c,c++,objc,lto --enable-lto --enable-multilib --with-multilib-list=aprofile,rmprofile --with-system-zlib --with-zstd --disable-debug --disable-dependency-tracking --prefix=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0 --libdir=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib
+        Thread model: single
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 14.2.0 (GCC) 
+        make[1]: *** [CMakeFiles/cmTC_a050f.dir/CMakeCCompilerABI.c.o] Error 1
+        make: *** [cmTC_a050f/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:9 (project)"
+    checks:
+      - "Check for working C compiler: /opt/homebrew/bin/arm-none-eabi-gcc"
+    directories:
+      source: "/Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-KI35OO"
+      binary: "/Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-KI35OO"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk"
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: /Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-KI35OO
+        
+        Run Build Command(s):/opt/homebrew/Cellar/cmake/3.26.4/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_57fdc/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_57fdc.dir/build.make CMakeFiles/cmTC_57fdc.dir/build
+        Building C object CMakeFiles/cmTC_57fdc.dir/testCCompiler.c.o
+        /opt/homebrew/bin/arm-none-eabi-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -o CMakeFiles/cmTC_57fdc.dir/testCCompiler.c.o -c /Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-KI35OO/testCCompiler.c
+        arm-none-eabi-gcc: error: unrecognized command-line option '-arch'; did you mean '-march='?
+        make[1]: *** [CMakeFiles/cmTC_57fdc.dir/testCCompiler.c.o] Error 1
+        make: *** [cmTC_57fdc/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: /opt/homebrew/bin/arm-none-eabi-gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find crt0.o: No such file or directory
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find -lc: No such file or directory
+      collect2: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /opt/homebrew/bin/arm-none-eabi-gcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is GNU, found in:
+        /Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /opt/homebrew/bin/arm-none-eabi-g++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find crt0.o: No such file or directory
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find -lstdc++: No such file or directory
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find -lm: No such file or directory
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find -lc: No such file or directory
+      collect2: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /opt/homebrew/bin/arm-none-eabi-g++ 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+      
+      The CXX compiler identification is GNU, found in:
+        /Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:1102 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineASMCompiler.cmake:127 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+      arm-none-eabi-gcc (GCC) 14.2.0
+      Copyright (C) 2024 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-QS6olf"
+      binary: "/Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-QS6olf"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: /Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-QS6olf
+        
+        Run Build Command(s):/opt/homebrew/Cellar/cmake/3.26.4/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_d621c/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_d621c.dir/build.make CMakeFiles/cmTC_d621c.dir/build
+        Building C object CMakeFiles/cmTC_d621c.dir/CMakeCCompilerABI.c.o
+        /opt/homebrew/bin/arm-none-eabi-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk   -v -Wl,-v -o CMakeFiles/cmTC_d621c.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/opt/homebrew/bin/arm-none-eabi-gcc
+        arm-none-eabi-gcc: error: unrecognized command-line option '-arch'; did you mean '-march='?
+        Target: arm-none-eabi
+        Configured with: ../configure --target=arm-none-eabi --prefix=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0 --infodir=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/share/info/arm-none-eabi --disable-nls --without-headers --with-as=/opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-as --with-ld=/opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld --enable-languages=c,c++,objc,lto --enable-lto --enable-multilib --with-multilib-list=aprofile,rmprofile --with-system-zlib --with-zstd --disable-debug --disable-dependency-tracking --prefix=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0 --libdir=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib
+        Thread model: single
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 14.2.0 (GCC) 
+        make[1]: *** [CMakeFiles/cmTC_d621c.dir/CMakeCCompilerABI.c.o] Error 1
+        make: *** [cmTC_d621c/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:9 (project)"
+    checks:
+      - "Check for working C compiler: /opt/homebrew/bin/arm-none-eabi-gcc"
+    directories:
+      source: "/Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-NrmPrF"
+      binary: "/Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-NrmPrF"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk"
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: /Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-NrmPrF
+        
+        Run Build Command(s):/opt/homebrew/Cellar/cmake/3.26.4/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_57c93/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_57c93.dir/build.make CMakeFiles/cmTC_57c93.dir/build
+        Building C object CMakeFiles/cmTC_57c93.dir/testCCompiler.c.o
+        /opt/homebrew/bin/arm-none-eabi-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -o CMakeFiles/cmTC_57c93.dir/testCCompiler.c.o -c /Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-NrmPrF/testCCompiler.c
+        arm-none-eabi-gcc: error: unrecognized command-line option '-arch'; did you mean '-march='?
+        make[1]: *** [CMakeFiles/cmTC_57c93.dir/testCCompiler.c.o] Error 1
+        make: *** [cmTC_57c93/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: /opt/homebrew/bin/arm-none-eabi-gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find crt0.o: No such file or directory
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find -lc: No such file or directory
+      collect2: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /opt/homebrew/bin/arm-none-eabi-gcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is GNU, found in:
+        /Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /opt/homebrew/bin/arm-none-eabi-g++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find crt0.o: No such file or directory
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find -lstdc++: No such file or directory
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find -lm: No such file or directory
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find -lc: No such file or directory
+      collect2: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /opt/homebrew/bin/arm-none-eabi-g++ 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+      
+      The CXX compiler identification is GNU, found in:
+        /Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:1102 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineASMCompiler.cmake:127 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+      arm-none-eabi-gcc (GCC) 14.2.0
+      Copyright (C) 2024 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-hX56Qd"
+      binary: "/Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-hX56Qd"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: /Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-hX56Qd
+        
+        Run Build Command(s):/opt/homebrew/Cellar/cmake/3.26.4/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_07a6c/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_07a6c.dir/build.make CMakeFiles/cmTC_07a6c.dir/build
+        Building C object CMakeFiles/cmTC_07a6c.dir/CMakeCCompilerABI.c.o
+        /opt/homebrew/bin/arm-none-eabi-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk   -v -Wl,-v -o CMakeFiles/cmTC_07a6c.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/opt/homebrew/bin/arm-none-eabi-gcc
+        arm-none-eabi-gcc: error: unrecognized command-line option '-arch'; did you mean '-march='?
+        Target: arm-none-eabi
+        Configured with: ../configure --target=arm-none-eabi --prefix=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0 --infodir=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/share/info/arm-none-eabi --disable-nls --without-headers --with-as=/opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-as --with-ld=/opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld --enable-languages=c,c++,objc,lto --enable-lto --enable-multilib --with-multilib-list=aprofile,rmprofile --with-system-zlib --with-zstd --disable-debug --disable-dependency-tracking --prefix=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0 --libdir=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib
+        Thread model: single
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 14.2.0 (GCC) 
+        make[1]: *** [CMakeFiles/cmTC_07a6c.dir/CMakeCCompilerABI.c.o] Error 1
+        make: *** [cmTC_07a6c/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:9 (project)"
+    checks:
+      - "Check for working C compiler: /opt/homebrew/bin/arm-none-eabi-gcc"
+    directories:
+      source: "/Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-T7eJ3k"
+      binary: "/Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-T7eJ3k"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk"
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: /Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-T7eJ3k
+        
+        Run Build Command(s):/opt/homebrew/Cellar/cmake/3.26.4/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_d4847/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_d4847.dir/build.make CMakeFiles/cmTC_d4847.dir/build
+        Building C object CMakeFiles/cmTC_d4847.dir/testCCompiler.c.o
+        /opt/homebrew/bin/arm-none-eabi-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -o CMakeFiles/cmTC_d4847.dir/testCCompiler.c.o -c /Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-T7eJ3k/testCCompiler.c
+        arm-none-eabi-gcc: error: unrecognized command-line option '-arch'; did you mean '-march='?
+        make[1]: *** [CMakeFiles/cmTC_d4847.dir/testCCompiler.c.o] Error 1
+        make: *** [cmTC_d4847/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: /opt/homebrew/bin/arm-none-eabi-gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find crt0.o: No such file or directory
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find -lc: No such file or directory
+      collect2: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /opt/homebrew/bin/arm-none-eabi-gcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is GNU, found in:
+        /Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /opt/homebrew/bin/arm-none-eabi-g++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find crt0.o: No such file or directory
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find -lstdc++: No such file or directory
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find -lm: No such file or directory
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find -lc: No such file or directory
+      collect2: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /opt/homebrew/bin/arm-none-eabi-g++ 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+      
+      The CXX compiler identification is GNU, found in:
+        /Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:1102 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineASMCompiler.cmake:127 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+      arm-none-eabi-gcc (GCC) 14.2.0
+      Copyright (C) 2024 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-NYADAU"
+      binary: "/Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-NYADAU"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: /Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-NYADAU
+        
+        Run Build Command(s):/opt/homebrew/Cellar/cmake/3.26.4/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_1fd47/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_1fd47.dir/build.make CMakeFiles/cmTC_1fd47.dir/build
+        Building C object CMakeFiles/cmTC_1fd47.dir/CMakeCCompilerABI.c.o
+        /opt/homebrew/bin/arm-none-eabi-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk   -v -Wl,-v -o CMakeFiles/cmTC_1fd47.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/opt/homebrew/bin/arm-none-eabi-gcc
+        arm-none-eabi-gcc: error: unrecognized command-line option '-arch'; did you mean '-march='?
+        Target: arm-none-eabi
+        Configured with: ../configure --target=arm-none-eabi --prefix=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0 --infodir=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/share/info/arm-none-eabi --disable-nls --without-headers --with-as=/opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-as --with-ld=/opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld --enable-languages=c,c++,objc,lto --enable-lto --enable-multilib --with-multilib-list=aprofile,rmprofile --with-system-zlib --with-zstd --disable-debug --disable-dependency-tracking --prefix=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0 --libdir=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib
+        Thread model: single
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 14.2.0 (GCC) 
+        make[1]: *** [CMakeFiles/cmTC_1fd47.dir/CMakeCCompilerABI.c.o] Error 1
+        make: *** [cmTC_1fd47/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:6 (project)"
+    checks:
+      - "Check for working C compiler: /opt/homebrew/bin/arm-none-eabi-gcc"
+    directories:
+      source: "/Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-stt6mp"
+      binary: "/Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-stt6mp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk"
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: /Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-stt6mp
+        
+        Run Build Command(s):/opt/homebrew/Cellar/cmake/3.26.4/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_208fc/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_208fc.dir/build.make CMakeFiles/cmTC_208fc.dir/build
+        Building C object CMakeFiles/cmTC_208fc.dir/testCCompiler.c.o
+        /opt/homebrew/bin/arm-none-eabi-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -o CMakeFiles/cmTC_208fc.dir/testCCompiler.c.o -c /Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-stt6mp/testCCompiler.c
+        arm-none-eabi-gcc: error: unrecognized command-line option '-arch'; did you mean '-march='?
+        make[1]: *** [CMakeFiles/cmTC_208fc.dir/testCCompiler.c.o] Error 1
+        make: *** [cmTC_208fc/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: /opt/homebrew/bin/arm-none-eabi-gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find crt0.o: No such file or directory
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find -lc: No such file or directory
+      collect2: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /opt/homebrew/bin/arm-none-eabi-gcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is GNU, found in:
+        /Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /opt/homebrew/bin/arm-none-eabi-g++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find crt0.o: No such file or directory
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find -lstdc++: No such file or directory
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find -lm: No such file or directory
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find -lc: No such file or directory
+      collect2: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /opt/homebrew/bin/arm-none-eabi-g++ 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+      
+      The CXX compiler identification is GNU, found in:
+        /Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:1102 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineASMCompiler.cmake:127 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+      arm-none-eabi-gcc (GCC) 14.2.0
+      Copyright (C) 2024 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:5 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-4hRUsU"
+      binary: "/Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-4hRUsU"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: /Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-4hRUsU
+        
+        Run Build Command(s):/opt/homebrew/Cellar/cmake/3.26.4/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_8cf25/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_8cf25.dir/build.make CMakeFiles/cmTC_8cf25.dir/build
+        Building C object CMakeFiles/cmTC_8cf25.dir/CMakeCCompilerABI.c.o
+        /opt/homebrew/bin/arm-none-eabi-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk   -v -Wl,-v -o CMakeFiles/cmTC_8cf25.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/opt/homebrew/bin/arm-none-eabi-gcc
+        arm-none-eabi-gcc: error: unrecognized command-line option '-arch'; did you mean '-march='?
+        Target: arm-none-eabi
+        Configured with: ../configure --target=arm-none-eabi --prefix=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0 --infodir=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/share/info/arm-none-eabi --disable-nls --without-headers --with-as=/opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-as --with-ld=/opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld --enable-languages=c,c++,objc,lto --enable-lto --enable-multilib --with-multilib-list=aprofile,rmprofile --with-system-zlib --with-zstd --disable-debug --disable-dependency-tracking --prefix=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0 --libdir=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib
+        Thread model: single
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 14.2.0 (GCC) 
+        make[1]: *** [CMakeFiles/cmTC_8cf25.dir/CMakeCCompilerABI.c.o] Error 1
+        make: *** [cmTC_8cf25/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:5 (project)"
+    checks:
+      - "Check for working C compiler: /opt/homebrew/bin/arm-none-eabi-gcc"
+    directories:
+      source: "/Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-zzxvgQ"
+      binary: "/Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-zzxvgQ"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk"
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: /Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-zzxvgQ
+        
+        Run Build Command(s):/opt/homebrew/Cellar/cmake/3.26.4/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_02da3/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_02da3.dir/build.make CMakeFiles/cmTC_02da3.dir/build
+        Building C object CMakeFiles/cmTC_02da3.dir/testCCompiler.c.o
+        /opt/homebrew/bin/arm-none-eabi-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -o CMakeFiles/cmTC_02da3.dir/testCCompiler.c.o -c /Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-zzxvgQ/testCCompiler.c
+        arm-none-eabi-gcc: error: unrecognized command-line option '-arch'; did you mean '-march='?
+        make[1]: *** [CMakeFiles/cmTC_02da3.dir/testCCompiler.c.o] Error 1
+        make: *** [cmTC_02da3/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: /opt/homebrew/bin/arm-none-eabi-gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find crt0.o: No such file or directory
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find -lc: No such file or directory
+      collect2: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /opt/homebrew/bin/arm-none-eabi-gcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is GNU, found in:
+        /Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /opt/homebrew/bin/arm-none-eabi-g++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find crt0.o: No such file or directory
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find -lstdc++: No such file or directory
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find -lm: No such file or directory
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find -lc: No such file or directory
+      collect2: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /opt/homebrew/bin/arm-none-eabi-g++ 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+      
+      The CXX compiler identification is GNU, found in:
+        /Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:1102 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineASMCompiler.cmake:127 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+      arm-none-eabi-gcc (GCC) 14.2.0
+      Copyright (C) 2024 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-Zjm9mW"
+      binary: "/Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-Zjm9mW"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: /Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-Zjm9mW
+        
+        Run Build Command(s):/opt/homebrew/Cellar/cmake/3.26.4/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_61ffd/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_61ffd.dir/build.make CMakeFiles/cmTC_61ffd.dir/build
+        Building C object CMakeFiles/cmTC_61ffd.dir/CMakeCCompilerABI.c.o
+        /opt/homebrew/bin/arm-none-eabi-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk   -v -Wl,-v -o CMakeFiles/cmTC_61ffd.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/opt/homebrew/bin/arm-none-eabi-gcc
+        arm-none-eabi-gcc: error: unrecognized command-line option '-arch'; did you mean '-march='?
+        Target: arm-none-eabi
+        Configured with: ../configure --target=arm-none-eabi --prefix=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0 --infodir=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/share/info/arm-none-eabi --disable-nls --without-headers --with-as=/opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-as --with-ld=/opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld --enable-languages=c,c++,objc,lto --enable-lto --enable-multilib --with-multilib-list=aprofile,rmprofile --with-system-zlib --with-zstd --disable-debug --disable-dependency-tracking --prefix=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0 --libdir=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib
+        Thread model: single
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 14.2.0 (GCC) 
+        make[1]: *** [CMakeFiles/cmTC_61ffd.dir/CMakeCCompilerABI.c.o] Error 1
+        make: *** [cmTC_61ffd/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:6 (project)"
+    checks:
+      - "Check for working C compiler: /opt/homebrew/bin/arm-none-eabi-gcc"
+    directories:
+      source: "/Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-KuyaEs"
+      binary: "/Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-KuyaEs"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk"
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: /Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-KuyaEs
+        
+        Run Build Command(s):/opt/homebrew/Cellar/cmake/3.26.4/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_06efe/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_06efe.dir/build.make CMakeFiles/cmTC_06efe.dir/build
+        Building C object CMakeFiles/cmTC_06efe.dir/testCCompiler.c.o
+        /opt/homebrew/bin/arm-none-eabi-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -o CMakeFiles/cmTC_06efe.dir/testCCompiler.c.o -c /Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-KuyaEs/testCCompiler.c
+        arm-none-eabi-gcc: error: unrecognized command-line option '-arch'; did you mean '-march='?
+        make[1]: *** [CMakeFiles/cmTC_06efe.dir/testCCompiler.c.o] Error 1
+        make: *** [cmTC_06efe/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: /opt/homebrew/bin/arm-none-eabi-gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find crt0.o: No such file or directory
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find -lc: No such file or directory
+      collect2: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /opt/homebrew/bin/arm-none-eabi-gcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is GNU, found in:
+        /Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /opt/homebrew/bin/arm-none-eabi-g++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find crt0.o: No such file or directory
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find -lstdc++: No such file or directory
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find -lm: No such file or directory
+      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find -lc: No such file or directory
+      collect2: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /opt/homebrew/bin/arm-none-eabi-g++ 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+      
+      The CXX compiler identification is GNU, found in:
+        /Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:1102 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineASMCompiler.cmake:127 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+      arm-none-eabi-gcc (GCC) 14.2.0
+      Copyright (C) 2024 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-cDp03I"
+      binary: "/Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-cDp03I"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: /Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-cDp03I
+        
+        Run Build Command(s):/opt/homebrew/Cellar/cmake/3.26.4/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_afe4a/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_afe4a.dir/build.make CMakeFiles/cmTC_afe4a.dir/build
+        Building C object CMakeFiles/cmTC_afe4a.dir/CMakeCCompilerABI.c.o
+        /opt/homebrew/bin/arm-none-eabi-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk   -v -Wl,-v -o CMakeFiles/cmTC_afe4a.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/opt/homebrew/bin/arm-none-eabi-gcc
+        arm-none-eabi-gcc: error: unrecognized command-line option '-arch'; did you mean '-march='?
+        Target: arm-none-eabi
+        Configured with: ../configure --target=arm-none-eabi --prefix=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0 --infodir=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/share/info/arm-none-eabi --disable-nls --without-headers --with-as=/opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-as --with-ld=/opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld --enable-languages=c,c++,objc,lto --enable-lto --enable-multilib --with-multilib-list=aprofile,rmprofile --with-system-zlib --with-zstd --disable-debug --disable-dependency-tracking --prefix=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0 --libdir=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib
+        Thread model: single
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 14.2.0 (GCC) 
+        make[1]: *** [CMakeFiles/cmTC_afe4a.dir/CMakeCCompilerABI.c.o] Error 1
+        make: *** [cmTC_afe4a/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:6 (project)"
+    checks:
+      - "Check for working C compiler: /opt/homebrew/bin/arm-none-eabi-gcc"
+    directories:
+      source: "/Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-55ZzVK"
+      binary: "/Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-55ZzVK"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk"
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: /Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-55ZzVK
+        
+        Run Build Command(s):/opt/homebrew/Cellar/cmake/3.26.4/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_40d36/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_40d36.dir/build.make CMakeFiles/cmTC_40d36.dir/build
+        Building C object CMakeFiles/cmTC_40d36.dir/testCCompiler.c.o
+        /opt/homebrew/bin/arm-none-eabi-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -o CMakeFiles/cmTC_40d36.dir/testCCompiler.c.o -c /Users/anto/Library/CloudStorage/OneDrive-Personal/Documents/Arduino/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-55ZzVK/testCCompiler.c
+        arm-none-eabi-gcc: error: unrecognized command-line option '-arch'; did you mean '-march='?
+        make[1]: *** [CMakeFiles/cmTC_40d36.dir/testCCompiler.c.o] Error 1
+        make: *** [cmTC_40d36/fast] Error 2
+        
+      exitCode: 2
+...

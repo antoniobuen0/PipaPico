@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/path/to/pico-sdk/src/common/pico_stdlib/include",
+                "/path/to/pico-sdk/src/rp2_common/hardware_uart/include",
+                "/path/to/pico-sdk/src/rp2_common/hardware_gpio/include",
+                "/path/to/pico-sdk/src/rp2_common/hardware_sync/include",
+                // Add other necessary include paths here
+            ],
+            "defines": [],
+            "macFrameworkPath": [],
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "macos-clang-x64"
+        }
+    ],
+    "version": 4
+}
