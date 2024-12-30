@@ -13,7 +13,7 @@
 10. [Licencia](#licencia)
 
 ## Descripción
-🌟 PipaPico es un proyecto basado en la placa **RP2040-Zero** que implementa un dispensador de pipas de manera automática. Utiliza procesamiento de imágenes para detectar, contar y gestionar pipas en tiempo real. 🐦
+🌟 PipaPico es un módulo de detección visual basado en la placa **RP2040-Zero** que forma parte de un sistema dispensador de pipas. Su función principal es detectar si hay exactamente una pipa en la imagen capturada, permitiendo así el control preciso del dispensador. 🔍
 
 ## Requisitos
 
@@ -90,26 +90,63 @@
   - **Nivel Compuerta**: 🎛️ Chequeo y manejo de exceso.
   - **Nivel Superior**: 🎯 Entrega de pipas.
 
+## Integración con el Dispensador
+
+### Flujo de Control
+1. 📸 **Detección con la Cámara**
+   - Captura de imagen mediante OV7670
+   - Procesamiento y filtrado
+   - Conteo de pipas mediante flood fill
+
+2. 🔄 **Lógica de Control**
+   - Si detecta 1 pipa → Activa servo para dispensar
+   - Si detecta 0 pipas → Activa vibración
+   - Si detecta >1 pipas → Abre trampilla de retorno
+
+3. ⚙️ **Actuadores**
+   - Servo principal (dispensador)
+   - Motor de vibración
+   - Servo de trampilla
+
+### Diagrama de Estados
+```
+[Captura] → [Procesado] → [Detección] → [Decisión]
+                                          │
+                    ┌────────────────┬────┴────────┐
+                    ↓                ↓             ↓
+              [0 pipas]        [1 pipa]     [>1 pipas]
+                    ↓                ↓             ↓
+             [Vibración]      [Servo ON]    [Trampilla]
+```
+
 ## Componentes
 
 | **Categoría**          | **Componente**                                       | **Cantidad** |
 |--------------------------|-----------------------------------------------------|--------------|
-| **Controlador**          | RP2040-Zero                                        | 1            |
-| **Motores y Actuadores** | Motor Paso a Paso 28BYJ-48 + ULN2003               | 1            |
-|                          | Servo SG90                                         | 2            |
-|                          | Motor de Vibración 1034                            | 1            |
-| **Sensores**             | Cámara OV7670                                     | 1            |
-| **Estructura Física**    | Guías de Cajón, Varilla Roscada, Perfiles y Bandejas | Variado      |
-| **Alimentación**         | Fuente de Alimentación 5V 2A                       | 1            |
+| **Control Principal**    | RP2040-Zero                                        | 1            |
+| **Sensores**            | Cámara OV7670                                      | 1            |
+| **Actuadores**          | Servo SG90 (Dispensador)                           | 1            |
+|                         | Servo SG90 (Trampilla)                             | 1            |
+|                         | Motor de Vibración                                  | 1            |
+| **Estructura**          | Guías y Soportes                                   | Varios       |
 
 ## Estructura del Código
 
-- [`main.c`](https://github.com/antoniobuen0/PipaPico/blob/main/main.c): 🖥️ Lógica principal del dispensador. 💡
-- [`config.h`](https://github.com/antoniobuen0/PipaPico/blob/main/config.h): 🛠️ Configuraciones globales del proyecto. ⚙️
-- [`median_filter.h`](https://github.com/antoniobuen0/PipaPico/blob/main/median_filter.h): 📊 Implementación del filtro de mediana. ✂️
-- [`detection.h`](https://github.com/antoniobuen0/PipaPico/blob/main/detection.h): 🔍 Detección de pipas. 🔬
-- [`symmetry.h`](https://github.com/antoniobuen0/PipaPico/blob/main/symmetry.h): ⚖️ Cálculo de simetría para validar detecciones. 📏
-- [`debug_comm.h`](https://github.com/antoniobuen0/PipaPico/blob/main/debug_comm.h): 💻 Comunicación serial para depuración. 🛰️
+### Detección Visual (`main.c`, `detection.c`)
+- 📸 Captura de imagen
+- 🔍 Procesamiento y detección
+- 📊 Conteo de pipas
+
+### Control de Actuadores (`main.c`)
+```c
+if (numPipas == 1) {
+    // Activar servo dispensador
+} else if (numPipas == 0) {
+    // Activar vibración
+} else {
+    // Abrir trampilla
+}
+```
 
 ## Códigos Explicados
 
