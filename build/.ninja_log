@@ -1,8 +1,8 @@
 # ninja log v6
 7	20	1735922307458460188	CMakeFiles/picotoolForceReconfigure	f07ef037509f4e2f
-7	20	1735922307458460188	/Users/anto/Proyectos/PipaPico/build/CMakeFiles/picotoolForceReconfigure	f07ef037509f4e2f
-20	118	1735922307569146728	picotool/src/picotoolBuild-stamp/picotoolBuild-mkdir	74ae70f088c0acc8
 20	118	1735922307569146728	/Users/anto/Proyectos/PipaPico/build/picotool/src/picotoolBuild-stamp/picotoolBuild-mkdir	74ae70f088c0acc8
-7	122	1735922307458855089	pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/compile_time_choice.S.o	bea0ae97312a1017
+7	20	1735922307458460188	/Users/anto/Proyectos/PipaPico/build/CMakeFiles/picotoolForceReconfigure	f07ef037509f4e2f
 118	156	1735922307606261940	picotool/src/picotoolBuild-stamp/picotoolBuild-download	381ef6d602d809e0
+20	118	1735922307569146728	picotool/src/picotoolBuild-stamp/picotoolBuild-mkdir	74ae70f088c0acc8
+7	122	1735922307458855089	pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/compile_time_choice.S.o	bea0ae97312a1017
 118	156	1735922307606261940	/Users/anto/Proyectos/PipaPico/build/picotool/src/picotoolBuild-stamp/picotoolBuild-download	381ef6d602d809e0
