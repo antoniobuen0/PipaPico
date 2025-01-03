@@ -2,5 +2,11 @@
     "files.associations": {
         "*.rmd": "markdown",
         "stdio.h": "c"
+    },
+    "cmake.environment": {
+        "PICO_SDK_PATH": "/Users/anto/pico/pico-sdk"
+    },
+    "cmake.configureEnvironment": {
+        "PICO_SDK_PATH": "/Users/anto/pico/pico-sdk"
     }
 }

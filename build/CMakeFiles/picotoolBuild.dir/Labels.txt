@@ -1,0 +1,14 @@
+# Target labels
+ picotoolBuild
+# Source files and their labels
+/Users/anto/Proyectos/PipaPico/build/CMakeFiles/picotoolBuild
+/Users/anto/Proyectos/PipaPico/build/CMakeFiles/picotoolBuild.rule
+/Users/anto/Proyectos/PipaPico/build/CMakeFiles/picotoolBuild-complete.rule
+/Users/anto/Proyectos/PipaPico/build/picotool/src/picotoolBuild-stamp/picotoolBuild-build.rule
+/Users/anto/Proyectos/PipaPico/build/picotool/src/picotoolBuild-stamp/picotoolBuild-configure.rule
+/Users/anto/Proyectos/PipaPico/build/picotool/src/picotoolBuild-stamp/picotoolBuild-download.rule
+/Users/anto/Proyectos/PipaPico/build/picotool/src/picotoolBuild-stamp/picotoolBuild-install.rule
+/Users/anto/Proyectos/PipaPico/build/picotool/src/picotoolBuild-stamp/picotoolBuild-mkdir.rule
+/Users/anto/Proyectos/PipaPico/build/picotool/src/picotoolBuild-stamp/picotoolBuild-patch.rule
+/Users/anto/Proyectos/PipaPico/build/picotool/src/picotoolBuild-stamp/picotoolBuild-test.rule
+/Users/anto/Proyectos/PipaPico/build/picotool/src/picotoolBuild-stamp/picotoolBuild-update.rule

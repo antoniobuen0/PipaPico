@@ -1,19 +1,24 @@
 {
+    "version": "0.2.0",
     "configurations": [
-        
         {
-            "name": "C/C++: arm-none-eabi-gcc build and debug active file",
-            "type": "cppdbg",
+            "name": "Pico Debug",
+            "type": "cortex-debug",
             "request": "launch",
-            "program": "${fileDirname}/${fileBasenameNoExtension}",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${fileDirname}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
-            "preLaunchTask": "C/C++: arm-none-eabi-gcc build active file"
+            "cwd": "${workspaceRoot}",
+            "executable": "${workspaceRoot}/build/PipaPico.elf",
+            "servertype": "openocd",
+            "device": "RP2040",
+            "configFiles": [
+                "interface/picoprobe.cfg",
+                "target/rp2040.cfg"
+            ],
+            "svdFile": "${env:PICO_SDK_PATH}/src/rp2040/hardware_regs/rp2040.svd",
+            "runToEntryPoint": "main",
+            "postRestartCommands": [
+                "break main",
+                "continue"
+            ]
         }
-    ],
-    "version": "2.0.0"
+    ]
 }

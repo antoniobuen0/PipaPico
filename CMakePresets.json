@@ -1,0 +1,16 @@
+{
+    "version": 3,
+    "configurePresets": [
+        {
+            "name": "pico",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "PICO_SDK_PATH": "/Users/anto/pico/pico-sdk",
+                "PICO_PLATFORM": "rp2040",
+                "PICO_BOARD": "pico"
+            }
+        }
+    ]
+}

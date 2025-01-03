@@ -4,21 +4,22 @@ events:
   -
     kind: "message-v1"
     backtrace:
-      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineSystem.cmake:204 (message)"
-      - "CMakeLists.txt:9 (project)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineSystem.cmake:199 (message)"
+      - "CMakeLists.txt:13 (project)"
     message: |
-      The system is: Darwin - 24.3.0 - arm64
+      The target system is: PICO -  - cortex-m0plus
+      The host system is: Darwin - 24.3.0 - arm64
   -
     kind: "message-v1"
     backtrace:
       - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:9 (project)"
+      - "CMakeLists.txt:13 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
       Compiler: /opt/homebrew/bin/arm-none-eabi-gcc 
-      Build flags: 
+      Build flags: ;-mcpu=cortex-m0plus;-mthumb
       Id flags:  
       
       The output was:
@@ -34,11 +35,11 @@ events:
       - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:9 (project)"
+      - "CMakeLists.txt:13 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
       Compiler: /opt/homebrew/bin/arm-none-eabi-gcc 
-      Build flags: 
+      Build flags: ;-mcpu=cortex-m0plus;-mthumb
       Id flags: -c 
       
       The output was:
@@ -56,11 +57,11 @@ events:
       - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:9 (project)"
+      - "CMakeLists.txt:13 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
       Compiler: /opt/homebrew/bin/arm-none-eabi-g++ 
-      Build flags: 
+      Build flags: ;-mcpu=cortex-m0plus;-mthumb
       Id flags:  
       
       The output was:
@@ -78,11 +79,11 @@ events:
       - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:9 (project)"
+      - "CMakeLists.txt:13 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
       Compiler: /opt/homebrew/bin/arm-none-eabi-g++ 
-      Build flags: 
+      Build flags: ;-mcpu=cortex-m0plus;-mthumb
       Id flags: -c 
       
       The output was:
@@ -99,7 +100,7 @@ events:
     backtrace:
       - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:1102 (message)"
       - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineASMCompiler.cmake:127 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
-      - "CMakeLists.txt:9 (project)"
+      - "CMakeLists.txt:13 (project)"
     message: |
       Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
       arm-none-eabi-gcc (GCC) 14.2.0
@@ -112,242 +113,319 @@ events:
     backtrace:
       - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
       - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:9 (project)"
+      - "CMakeLists.txt:13 (project)"
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/Users/anto/Proyectos/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-uJgQdN"
-      binary: "/Users/anto/Proyectos/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-uJgQdN"
+      source: "/Users/anto/Proyectos/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-cr4wN1"
+      binary: "/Users/anto/Proyectos/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-cr4wN1"
     cmakeVariables:
-      CMAKE_C_FLAGS: ""
-      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_C_FLAGS: "-mcpu=cortex-m0plus -mthumb"
+      CMAKE_C_FLAGS_DEBUG: "-Og -g"
       CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_OSX_ARCHITECTURES: ""
-      CMAKE_OSX_DEPLOYMENT_TARGET: ""
-      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk"
+      CMAKE_MODULE_PATH: "/Users/anto/pico/pico-sdk/cmake"
     buildResult:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: /Users/anto/Proyectos/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-uJgQdN
+        Change Dir: /Users/anto/Proyectos/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-cr4wN1
         
-        Run Build Command(s):/opt/homebrew/Cellar/cmake/3.26.4/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_5bfa7/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_5bfa7.dir/build.make CMakeFiles/cmTC_5bfa7.dir/build
-        Building C object CMakeFiles/cmTC_5bfa7.dir/CMakeCCompilerABI.c.o
-        /opt/homebrew/bin/arm-none-eabi-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk   -v -Wl,-v -o CMakeFiles/cmTC_5bfa7.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeCCompilerABI.c
+        Run Build Command(s):/opt/homebrew/bin/ninja -v cmTC_260a9 && [1/2] /opt/homebrew/bin/arm-none-eabi-gcc   -mcpu=cortex-m0plus -mthumb    -v -o CMakeFiles/cmTC_260a9.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=/opt/homebrew/bin/arm-none-eabi-gcc
-        arm-none-eabi-gcc: error: unrecognized command-line option '-arch'; did you mean '-march='?
         Target: arm-none-eabi
         Configured with: ../configure --target=arm-none-eabi --prefix=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0 --infodir=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/share/info/arm-none-eabi --disable-nls --without-headers --with-as=/opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-as --with-ld=/opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld --enable-languages=c,c++,objc,lto --enable-lto --enable-multilib --with-multilib-list=aprofile,rmprofile --with-system-zlib --with-zstd --disable-debug --disable-dependency-tracking --prefix=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0 --libdir=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib
         Thread model: single
         Supported LTO compression algorithms: zlib zstd
         gcc version 14.2.0 (GCC) 
-        make[1]: *** [CMakeFiles/cmTC_5bfa7.dir/CMakeCCompilerABI.c.o] Error 1
-        make: *** [cmTC_5bfa7/fast] Error 2
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_260a9.dir/CMakeCCompilerABI.c.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_260a9.dir/'
+         /opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/cc1 -quiet -v -imultilib thumb/v6-m/nofp -D__USES_INITFINI__ /opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_260a9.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -version -o /var/folders/wy/zj3ljcnx1fq21q9991cr757m0000gn/T//ccn0cRaK.s
+        GNU C17 (GCC) version 14.2.0 (arm-none-eabi)
+        	compiled by GNU C version Apple LLVM 16.0.0 (clang-1600.0.26.4), GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.27-GMP
         
-      exitCode: 2
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
-      - "CMakeLists.txt:9 (project)"
-    checks:
-      - "Check for working C compiler: /opt/homebrew/bin/arm-none-eabi-gcc"
-    directories:
-      source: "/Users/anto/Proyectos/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-GwG0Yj"
-      binary: "/Users/anto/Proyectos/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-GwG0Yj"
-    cmakeVariables:
-      CMAKE_C_FLAGS: ""
-      CMAKE_C_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_OSX_ARCHITECTURES: ""
-      CMAKE_OSX_DEPLOYMENT_TARGET: ""
-      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk"
-    buildResult:
-      variable: "CMAKE_C_COMPILER_WORKS"
-      cached: true
-      stdout: |
-        Change Dir: /Users/anto/Proyectos/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-GwG0Yj
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/sys-include"
+        ignoring nonexistent directory "/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/include
+         /opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/include-fixed
+        End of search list.
+        Compiler executable checksum: ffbb9ff8666e7ad83fc66d181b0d8c91
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_260a9.dir/CMakeCCompilerABI.c.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_260a9.dir/'
+         /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-as -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_260a9.dir/CMakeCCompilerABI.c.o /var/folders/wy/zj3ljcnx1fq21q9991cr757m0000gn/T//ccn0cRaK.s
+        GNU assembler version 2.43.1 (arm-none-eabi) using BFD version (GNU Binutils) 2.43.1
+        COMPILER_PATH=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/:/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/:/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/:/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/:/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/
+        LIBRARY_PATH=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/thumb/v6-m/nofp/:/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_260a9.dir/CMakeCCompilerABI.c.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_260a9.dir/CMakeCCompilerABI.c.'
+        [2/2] : && /opt/homebrew/bin/arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -Wl,--build-id=none -nostdlib -v CMakeFiles/cmTC_260a9.dir/CMakeCCompilerABI.c.o -o cmTC_260a9.elf   && :
+        Using built-in specs.
+        COLLECT_GCC=/opt/homebrew/bin/arm-none-eabi-gcc
+        COLLECT_LTO_WRAPPER=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/lto-wrapper
+        Target: arm-none-eabi
+        Configured with: ../configure --target=arm-none-eabi --prefix=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0 --infodir=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/share/info/arm-none-eabi --disable-nls --without-headers --with-as=/opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-as --with-ld=/opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld --enable-languages=c,c++,objc,lto --enable-lto --enable-multilib --with-multilib-list=aprofile,rmprofile --with-system-zlib --with-zstd --disable-debug --disable-dependency-tracking --prefix=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0 --libdir=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib
+        Thread model: single
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 14.2.0 (GCC) 
+        COMPILER_PATH=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/:/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/:/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/:/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/:/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/
+        LIBRARY_PATH=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/thumb/v6-m/nofp/:/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_260a9.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_260a9.elf.'
+         /opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/collect2 -plugin /opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/liblto_plugin.so -plugin-opt=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/wy/zj3ljcnx1fq21q9991cr757m0000gn/T//ccDn2c4W.res -X -o cmTC_260a9.elf -L/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/thumb/v6-m/nofp -L/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0 --build-id=none CMakeFiles/cmTC_260a9.dir/CMakeCCompilerABI.c.o
+        /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: warning: cannot find entry symbol _start; defaulting to 00008000
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_260a9.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_260a9.elf.'
         
-        Run Build Command(s):/opt/homebrew/Cellar/cmake/3.26.4/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_1ea99/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_1ea99.dir/build.make CMakeFiles/cmTC_1ea99.dir/build
-        Building C object CMakeFiles/cmTC_1ea99.dir/testCCompiler.c.o
-        /opt/homebrew/bin/arm-none-eabi-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -o CMakeFiles/cmTC_1ea99.dir/testCCompiler.c.o -c /Users/anto/Proyectos/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-GwG0Yj/testCCompiler.c
-        arm-none-eabi-gcc: error: unrecognized command-line option '-arch'; did you mean '-march='?
-        make[1]: *** [CMakeFiles/cmTC_1ea99.dir/testCCompiler.c.o] Error 1
-        make: *** [cmTC_1ea99/fast] Error 2
-        
-      exitCode: 2
-...
-
----
-events:
+      exitCode: 0
   -
     kind: "message-v1"
     backtrace:
-      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
-      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:9 (project)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:13 (project)"
     message: |
-      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
-      Compiler: /opt/homebrew/bin/arm-none-eabi-gcc 
-      Build flags: 
-      Id flags:  
-      
-      The output was:
-      1
-      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find crt0.o: No such file or directory
-      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find -lc: No such file or directory
-      collect2: error: ld returned 1 exit status
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/include]
+          add: [/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/include-fixed]
+        end of search list found
+        collapse include dir [/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/include] ==> [/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/include]
+        collapse include dir [/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/include-fixed] ==> [/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/include-fixed]
+        implicit include dirs: [/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/include;/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/include-fixed]
       
       
   -
     kind: "message-v1"
     backtrace:
-      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
-      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:9 (project)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:13 (project)"
     message: |
-      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-      Compiler: /opt/homebrew/bin/arm-none-eabi-gcc 
-      Build flags: 
-      Id flags: -c 
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(arm-none-eabi-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: /Users/anto/Proyectos/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-cr4wN1]
+        ignore line: []
+        ignore line: [Run Build Command(s):/opt/homebrew/bin/ninja -v cmTC_260a9 && [1/2] /opt/homebrew/bin/arm-none-eabi-gcc   -mcpu=cortex-m0plus -mthumb    -v -o CMakeFiles/cmTC_260a9.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/opt/homebrew/bin/arm-none-eabi-gcc]
+        ignore line: [Target: arm-none-eabi]
+        ignore line: [Configured with: ../configure --target=arm-none-eabi --prefix=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0 --infodir=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/share/info/arm-none-eabi --disable-nls --without-headers --with-as=/opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-as --with-ld=/opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld --enable-languages=c,c++,objc,lto --enable-lto --enable-multilib --with-multilib-list=aprofile,rmprofile --with-system-zlib --with-zstd --disable-debug --disable-dependency-tracking --prefix=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0 --libdir=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib]
+        ignore line: [Thread model: single]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 14.2.0 (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_260a9.dir/CMakeCCompilerABI.c.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_260a9.dir/']
+        ignore line: [ /opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/cc1 -quiet -v -imultilib thumb/v6-m/nofp -D__USES_INITFINI__ /opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_260a9.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -version -o /var/folders/wy/zj3ljcnx1fq21q9991cr757m0000gn/T//ccn0cRaK.s]
+        ignore line: [GNU C17 (GCC) version 14.2.0 (arm-none-eabi)]
+        ignore line: [	compiled by GNU C version Apple LLVM 16.0.0 (clang-1600.0.26.4)  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.27-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/sys-include"]
+        ignore line: [ignoring nonexistent directory "/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/include]
+        ignore line: [ /opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/include-fixed]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: ffbb9ff8666e7ad83fc66d181b0d8c91]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_260a9.dir/CMakeCCompilerABI.c.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_260a9.dir/']
+        ignore line: [ /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-as -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_260a9.dir/CMakeCCompilerABI.c.o /var/folders/wy/zj3ljcnx1fq21q9991cr757m0000gn/T//ccn0cRaK.s]
+        ignore line: [GNU assembler version 2.43.1 (arm-none-eabi) using BFD version (GNU Binutils) 2.43.1]
+        ignore line: [COMPILER_PATH=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/:/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/:/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/:/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/:/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/]
+        ignore line: [LIBRARY_PATH=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/thumb/v6-m/nofp/:/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_260a9.dir/CMakeCCompilerABI.c.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_260a9.dir/CMakeCCompilerABI.c.']
+        ignore line: [[2/2] : && /opt/homebrew/bin/arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -Wl --build-id=none -nostdlib -v CMakeFiles/cmTC_260a9.dir/CMakeCCompilerABI.c.o -o cmTC_260a9.elf   && :]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/opt/homebrew/bin/arm-none-eabi-gcc]
+        ignore line: [COLLECT_LTO_WRAPPER=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/lto-wrapper]
+        ignore line: [Target: arm-none-eabi]
+        ignore line: [Configured with: ../configure --target=arm-none-eabi --prefix=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0 --infodir=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/share/info/arm-none-eabi --disable-nls --without-headers --with-as=/opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-as --with-ld=/opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld --enable-languages=c,c++,objc,lto --enable-lto --enable-multilib --with-multilib-list=aprofile,rmprofile --with-system-zlib --with-zstd --disable-debug --disable-dependency-tracking --prefix=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0 --libdir=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib]
+        ignore line: [Thread model: single]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 14.2.0 (GCC) ]
+        ignore line: [COMPILER_PATH=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/:/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/:/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/:/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/:/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/]
+        ignore line: [LIBRARY_PATH=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/thumb/v6-m/nofp/:/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_260a9.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_260a9.elf.']
+        link line: [ /opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/collect2 -plugin /opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/liblto_plugin.so -plugin-opt=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/wy/zj3ljcnx1fq21q9991cr757m0000gn/T//ccDn2c4W.res -X -o cmTC_260a9.elf -L/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/thumb/v6-m/nofp -L/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0 --build-id=none CMakeFiles/cmTC_260a9.dir/CMakeCCompilerABI.c.o]
+          arg [/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/var/folders/wy/zj3ljcnx1fq21q9991cr757m0000gn/T//ccDn2c4W.res] ==> ignore
+          arg [-X] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_260a9.elf] ==> ignore
+          arg [-L/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/thumb/v6-m/nofp] ==> dir [/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/thumb/v6-m/nofp]
+          arg [-L/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0] ==> dir [/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0]
+          arg [--build-id=none] ==> ignore
+          arg [CMakeFiles/cmTC_260a9.dir/CMakeCCompilerABI.c.o] ==> ignore
+        collapse library dir [/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/thumb/v6-m/nofp] ==> [/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/thumb/v6-m/nofp]
+        collapse library dir [/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0] ==> [/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0]
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: [/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/thumb/v6-m/nofp;/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0]
+        implicit fwks: []
       
-      The output was:
-      0
-      
-      
-      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
-      
-      The C compiler identification is GNU, found in:
-        /Users/anto/Proyectos/PipaPico/build/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.o
-      
-  -
-    kind: "message-v1"
-    backtrace:
-      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
-      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:9 (project)"
-    message: |
-      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-      Compiler: /opt/homebrew/bin/arm-none-eabi-g++ 
-      Build flags: 
-      Id flags:  
-      
-      The output was:
-      1
-      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find crt0.o: No such file or directory
-      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find -lstdc++: No such file or directory
-      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find -lm: No such file or directory
-      /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: cannot find -lc: No such file or directory
-      collect2: error: ld returned 1 exit status
-      
-      
-  -
-    kind: "message-v1"
-    backtrace:
-      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
-      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:9 (project)"
-    message: |
-      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-      Compiler: /opt/homebrew/bin/arm-none-eabi-g++ 
-      Build flags: 
-      Id flags: -c 
-      
-      The output was:
-      0
-      
-      
-      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
-      
-      The CXX compiler identification is GNU, found in:
-        /Users/anto/Proyectos/PipaPico/build/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.o
-      
-  -
-    kind: "message-v1"
-    backtrace:
-      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerId.cmake:1102 (message)"
-      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineASMCompiler.cmake:127 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
-      - "CMakeLists.txt:9 (project)"
-    message: |
-      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
-      arm-none-eabi-gcc (GCC) 14.2.0
-      Copyright (C) 2024 Free Software Foundation, Inc.
-      This is free software; see the source for copying conditions.  There is NO
-      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
       
   -
     kind: "try_compile-v1"
     backtrace:
       - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
-      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:9 (project)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:13 (project)"
     checks:
-      - "Detecting C compiler ABI info"
+      - "Detecting CXX compiler ABI info"
     directories:
-      source: "/Users/anto/Proyectos/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-MptkqH"
-      binary: "/Users/anto/Proyectos/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-MptkqH"
+      source: "/Users/anto/Proyectos/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-7icHhv"
+      binary: "/Users/anto/Proyectos/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-7icHhv"
     cmakeVariables:
-      CMAKE_C_FLAGS: ""
-      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_CXX_FLAGS: "-mcpu=cortex-m0plus -mthumb"
+      CMAKE_CXX_FLAGS_DEBUG: "-Og -g"
       CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_OSX_ARCHITECTURES: ""
-      CMAKE_OSX_DEPLOYMENT_TARGET: ""
-      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk"
+      CMAKE_MODULE_PATH: "/Users/anto/pico/pico-sdk/cmake"
     buildResult:
-      variable: "CMAKE_C_ABI_COMPILED"
+      variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: /Users/anto/Proyectos/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-MptkqH
+        Change Dir: /Users/anto/Proyectos/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-7icHhv
         
-        Run Build Command(s):/opt/homebrew/Cellar/cmake/3.26.4/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_45014/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_45014.dir/build.make CMakeFiles/cmTC_45014.dir/build
-        Building C object CMakeFiles/cmTC_45014.dir/CMakeCCompilerABI.c.o
-        /opt/homebrew/bin/arm-none-eabi-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk   -v -Wl,-v -o CMakeFiles/cmTC_45014.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeCCompilerABI.c
+        Run Build Command(s):/opt/homebrew/bin/ninja -v cmTC_42dbd && [1/2] /opt/homebrew/bin/arm-none-eabi-g++   -mcpu=cortex-m0plus -mthumb    -v -o CMakeFiles/cmTC_42dbd.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
-        COLLECT_GCC=/opt/homebrew/bin/arm-none-eabi-gcc
-        arm-none-eabi-gcc: error: unrecognized command-line option '-arch'; did you mean '-march='?
+        COLLECT_GCC=/opt/homebrew/bin/arm-none-eabi-g++
         Target: arm-none-eabi
         Configured with: ../configure --target=arm-none-eabi --prefix=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0 --infodir=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/share/info/arm-none-eabi --disable-nls --without-headers --with-as=/opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-as --with-ld=/opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld --enable-languages=c,c++,objc,lto --enable-lto --enable-multilib --with-multilib-list=aprofile,rmprofile --with-system-zlib --with-zstd --disable-debug --disable-dependency-tracking --prefix=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0 --libdir=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib
         Thread model: single
         Supported LTO compression algorithms: zlib zstd
         gcc version 14.2.0 (GCC) 
-        make[1]: *** [CMakeFiles/cmTC_45014.dir/CMakeCCompilerABI.c.o] Error 1
-        make: *** [cmTC_45014/fast] Error 2
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_42dbd.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_42dbd.dir/'
+         /opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/cc1plus -quiet -v -imultilib thumb/v6-m/nofp -D__USES_INITFINI__ /opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_42dbd.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -version -o /var/folders/wy/zj3ljcnx1fq21q9991cr757m0000gn/T//cc1uxJbC.s
+        GNU C++17 (GCC) version 14.2.0 (arm-none-eabi)
+        	compiled by GNU C version Apple LLVM 16.0.0 (clang-1600.0.26.4), GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.27-GMP
         
-      exitCode: 2
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/include/c++/14.2.0"
+        ignoring nonexistent directory "/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/include/c++/14.2.0/arm-none-eabi/thumb/v6-m/nofp"
+        ignoring nonexistent directory "/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/include/c++/14.2.0/backward"
+        ignoring nonexistent directory "/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/sys-include"
+        ignoring nonexistent directory "/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/include
+         /opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/include-fixed
+        End of search list.
+        Compiler executable checksum: 77cc677807f50a183eb87ff7a8ae82c5
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_42dbd.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_42dbd.dir/'
+         /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-as -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_42dbd.dir/CMakeCXXCompilerABI.cpp.o /var/folders/wy/zj3ljcnx1fq21q9991cr757m0000gn/T//cc1uxJbC.s
+        GNU assembler version 2.43.1 (arm-none-eabi) using BFD version (GNU Binutils) 2.43.1
+        COMPILER_PATH=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/:/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/:/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/:/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/:/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/
+        LIBRARY_PATH=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/thumb/v6-m/nofp/:/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_42dbd.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_42dbd.dir/CMakeCXXCompilerABI.cpp.'
+        [2/2] : && /opt/homebrew/bin/arm-none-eabi-g++ -mcpu=cortex-m0plus -mthumb -Wl,--build-id=none -nostdlib -v CMakeFiles/cmTC_42dbd.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_42dbd.elf   && :
+        Using built-in specs.
+        COLLECT_GCC=/opt/homebrew/bin/arm-none-eabi-g++
+        COLLECT_LTO_WRAPPER=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/lto-wrapper
+        Target: arm-none-eabi
+        Configured with: ../configure --target=arm-none-eabi --prefix=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0 --infodir=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/share/info/arm-none-eabi --disable-nls --without-headers --with-as=/opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-as --with-ld=/opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld --enable-languages=c,c++,objc,lto --enable-lto --enable-multilib --with-multilib-list=aprofile,rmprofile --with-system-zlib --with-zstd --disable-debug --disable-dependency-tracking --prefix=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0 --libdir=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib
+        Thread model: single
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 14.2.0 (GCC) 
+        COMPILER_PATH=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/:/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/:/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/:/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/:/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/
+        LIBRARY_PATH=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/thumb/v6-m/nofp/:/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_42dbd.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_42dbd.elf.'
+         /opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/collect2 -plugin /opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/liblto_plugin.so -plugin-opt=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/wy/zj3ljcnx1fq21q9991cr757m0000gn/T//ccSBmylM.res -X -o cmTC_42dbd.elf -L/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/thumb/v6-m/nofp -L/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0 --build-id=none CMakeFiles/cmTC_42dbd.dir/CMakeCXXCompilerABI.cpp.o
+        /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld: warning: cannot find entry symbol _start; defaulting to 00008000
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_42dbd.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_42dbd.elf.'
+        
+      exitCode: 0
   -
-    kind: "try_compile-v1"
+    kind: "message-v1"
     backtrace:
-      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
-      - "CMakeLists.txt:9 (project)"
-    checks:
-      - "Check for working C compiler: /opt/homebrew/bin/arm-none-eabi-gcc"
-    directories:
-      source: "/Users/anto/Proyectos/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-q1icAf"
-      binary: "/Users/anto/Proyectos/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-q1icAf"
-    cmakeVariables:
-      CMAKE_C_FLAGS: ""
-      CMAKE_C_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_OSX_ARCHITECTURES: ""
-      CMAKE_OSX_DEPLOYMENT_TARGET: ""
-      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk"
-    buildResult:
-      variable: "CMAKE_C_COMPILER_WORKS"
-      cached: true
-      stdout: |
-        Change Dir: /Users/anto/Proyectos/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-q1icAf
-        
-        Run Build Command(s):/opt/homebrew/Cellar/cmake/3.26.4/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_c6c74/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_c6c74.dir/build.make CMakeFiles/cmTC_c6c74.dir/build
-        Building C object CMakeFiles/cmTC_c6c74.dir/testCCompiler.c.o
-        /opt/homebrew/bin/arm-none-eabi-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -o CMakeFiles/cmTC_c6c74.dir/testCCompiler.c.o -c /Users/anto/Proyectos/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-q1icAf/testCCompiler.c
-        arm-none-eabi-gcc: error: unrecognized command-line option '-arch'; did you mean '-march='?
-        make[1]: *** [CMakeFiles/cmTC_c6c74.dir/testCCompiler.c.o] Error 1
-        make: *** [cmTC_c6c74/fast] Error 2
-        
-      exitCode: 2
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:13 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/include]
+          add: [/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/include-fixed]
+        end of search list found
+        collapse include dir [/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/include] ==> [/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/include]
+        collapse include dir [/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/include-fixed] ==> [/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/include-fixed]
+        implicit include dirs: [/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/include;/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/include-fixed]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:13 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(arm-none-eabi-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: /Users/anto/Proyectos/PipaPico/build/CMakeFiles/CMakeScratch/TryCompile-7icHhv]
+        ignore line: []
+        ignore line: [Run Build Command(s):/opt/homebrew/bin/ninja -v cmTC_42dbd && [1/2] /opt/homebrew/bin/arm-none-eabi-g++   -mcpu=cortex-m0plus -mthumb    -v -o CMakeFiles/cmTC_42dbd.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/opt/homebrew/bin/arm-none-eabi-g++]
+        ignore line: [Target: arm-none-eabi]
+        ignore line: [Configured with: ../configure --target=arm-none-eabi --prefix=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0 --infodir=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/share/info/arm-none-eabi --disable-nls --without-headers --with-as=/opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-as --with-ld=/opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld --enable-languages=c,c++,objc,lto --enable-lto --enable-multilib --with-multilib-list=aprofile,rmprofile --with-system-zlib --with-zstd --disable-debug --disable-dependency-tracking --prefix=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0 --libdir=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib]
+        ignore line: [Thread model: single]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 14.2.0 (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_42dbd.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_42dbd.dir/']
+        ignore line: [ /opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/cc1plus -quiet -v -imultilib thumb/v6-m/nofp -D__USES_INITFINI__ /opt/homebrew/Cellar/cmake/3.26.4/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_42dbd.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -version -o /var/folders/wy/zj3ljcnx1fq21q9991cr757m0000gn/T//cc1uxJbC.s]
+        ignore line: [GNU C++17 (GCC) version 14.2.0 (arm-none-eabi)]
+        ignore line: [	compiled by GNU C version Apple LLVM 16.0.0 (clang-1600.0.26.4)  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.27-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/include/c++/14.2.0"]
+        ignore line: [ignoring nonexistent directory "/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/include/c++/14.2.0/arm-none-eabi/thumb/v6-m/nofp"]
+        ignore line: [ignoring nonexistent directory "/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/include/c++/14.2.0/backward"]
+        ignore line: [ignoring nonexistent directory "/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/sys-include"]
+        ignore line: [ignoring nonexistent directory "/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/include]
+        ignore line: [ /opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/include-fixed]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: 77cc677807f50a183eb87ff7a8ae82c5]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_42dbd.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_42dbd.dir/']
+        ignore line: [ /opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-as -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_42dbd.dir/CMakeCXXCompilerABI.cpp.o /var/folders/wy/zj3ljcnx1fq21q9991cr757m0000gn/T//cc1uxJbC.s]
+        ignore line: [GNU assembler version 2.43.1 (arm-none-eabi) using BFD version (GNU Binutils) 2.43.1]
+        ignore line: [COMPILER_PATH=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/:/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/:/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/:/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/:/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/]
+        ignore line: [LIBRARY_PATH=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/thumb/v6-m/nofp/:/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_42dbd.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_42dbd.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [[2/2] : && /opt/homebrew/bin/arm-none-eabi-g++ -mcpu=cortex-m0plus -mthumb -Wl --build-id=none -nostdlib -v CMakeFiles/cmTC_42dbd.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_42dbd.elf   && :]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/opt/homebrew/bin/arm-none-eabi-g++]
+        ignore line: [COLLECT_LTO_WRAPPER=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/lto-wrapper]
+        ignore line: [Target: arm-none-eabi]
+        ignore line: [Configured with: ../configure --target=arm-none-eabi --prefix=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0 --infodir=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/share/info/arm-none-eabi --disable-nls --without-headers --with-as=/opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-as --with-ld=/opt/homebrew/opt/arm-none-eabi-binutils/bin/arm-none-eabi-ld --enable-languages=c,c++,objc,lto --enable-lto --enable-multilib --with-multilib-list=aprofile,rmprofile --with-system-zlib --with-zstd --disable-debug --disable-dependency-tracking --prefix=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0 --libdir=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib]
+        ignore line: [Thread model: single]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 14.2.0 (GCC) ]
+        ignore line: [COMPILER_PATH=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/:/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/:/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/:/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/:/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/]
+        ignore line: [LIBRARY_PATH=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/thumb/v6-m/nofp/:/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_42dbd.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_42dbd.elf.']
+        link line: [ /opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/collect2 -plugin /opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/liblto_plugin.so -plugin-opt=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/wy/zj3ljcnx1fq21q9991cr757m0000gn/T//ccSBmylM.res -X -o cmTC_42dbd.elf -L/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/thumb/v6-m/nofp -L/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0 --build-id=none CMakeFiles/cmTC_42dbd.dir/CMakeCXXCompilerABI.cpp.o]
+          arg [/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/libexec/gcc/arm-none-eabi/14.2.0/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/var/folders/wy/zj3ljcnx1fq21q9991cr757m0000gn/T//ccSBmylM.res] ==> ignore
+          arg [-X] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_42dbd.elf] ==> ignore
+          arg [-L/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/thumb/v6-m/nofp] ==> dir [/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/thumb/v6-m/nofp]
+          arg [-L/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0] ==> dir [/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0]
+          arg [--build-id=none] ==> ignore
+          arg [CMakeFiles/cmTC_42dbd.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+        collapse library dir [/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/thumb/v6-m/nofp] ==> [/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/thumb/v6-m/nofp]
+        collapse library dir [/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0] ==> [/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0]
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: [/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0/thumb/v6-m/nofp;/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/lib/gcc/arm-none-eabi/14.2.0]
+        implicit fwks: []
+      
+      
 ...
