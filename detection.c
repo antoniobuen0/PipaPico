@@ -100,10 +100,16 @@ int detectPipas(int* numPipas) {
                 // Sólo incrementamos el recuento si la pipa es válida
                 if (pipa->isValid) {
                     (*numPipas)++;
+                } else {
+                    // Logging
+                    printf("Invalid pipa detected: area=%d, aspectRatio=%.2f, symmetryScore=%.2f\n", pipa->area, pipa->aspectRatio, pipa->symmetryScore);
                 }
             }
         }
     }
+
+    // Logging
+    printf("Total pipas detected: %d\n", *numPipas);
 
     return *numPipas;
 }

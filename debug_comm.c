@@ -2,6 +2,7 @@
 #include <string.h>
 #include <hardware/uart.h>
 #include <pico/time.h>
+#include <stdio.h>
 
 // Enviamos el frame binario vía UART0
 void sendDebugFrame(const uint8_t* buffer, int numPipas) {
@@ -15,5 +16,12 @@ void sendDebugFrame(const uint8_t* buffer, int numPipas) {
     memcpy(frame.data, buffer, FRAME_SIZE);
 
     // Enviar por UART0 (asegurarse de que uart0 esté inicializado en main.c)
-    uart_write_blocking(uart0, (uint8_t*)&frame, sizeof(frame));
+    int result = uart_write_blocking(uart0, (uint8_t*)&frame, sizeof(frame));
+    if (result < 0) {
+        // Error handling
+        printf("Error: Failed to send debug frame via UART0\n");
+    } else {
+        // Logging
+        printf("Debug frame sent successfully: timestamp=%u, numPipas=%d\n", frame.timestamp, frame.numPipas);
+    }
 }

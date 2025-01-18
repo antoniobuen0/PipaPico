@@ -205,3 +205,32 @@ En esta sección destacamos la **lógica** de cada `.c`:
 ## Licencia
 
 📜 Este proyecto está licenciado bajo la Licencia GPL-3.0. Consulta el archivo [`LICENSE`](https://github.com/antoniobuen0/PipaPico/blob/main/LICENSE) para más detalles. 📜
+
+## Testing and Validation Steps
+
+1. **Unit Tests**:
+    - Ensure that all individual functions work as expected.
+    - Use a testing framework like Unity or CMock to automate unit tests.
+
+2. **Integration Tests**:
+    - Verify that different modules work together correctly.
+    - Test the complete flow from image capture to pipa detection and actuator control.
+
+3. **Manual Testing**:
+    - Perform manual tests to validate the system's behavior in real-world scenarios.
+    - Check for edge cases and unexpected inputs.
+
+## Code of Conduct and Contribution Guidelines
+
+### Code of Conduct
+We expect all contributors to adhere to our Code of Conduct. Please read the [Code of Conduct](CODE_OF_CONDUCT.md) before contributing.
+
+### Contribution Guidelines
+We welcome contributions from the community. To contribute, please follow these steps:
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix.
+3. Make your changes and commit them with clear and concise messages.
+4. Push your changes to your forked repository.
+5. Create a pull request to the main repository.
+
+For more details, please refer to the [Contribution Guidelines](CONTRIBUTING.md).
